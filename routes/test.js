@@ -1,0 +1,12 @@
+const express = require('express');
+const bodyPraser = require('body-parser');
+const router = express.Router();
+
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.send('test');
+});
+
+
+
+module.exports = router;

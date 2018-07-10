@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(name="testform", action="/", method="POST")
+    div.form-group
+      label(for="firstname") First Name: 
+      input(type ='text', name="firstname", required = 'true')
+      label(for="lastname") Last Name: 
+      input(type="text", name="lastname", required = 'true')
+      button.btn.btn-default(type="submit") Submit
+
+  if data
+    p #{data.firstname}
+    p #{data.lastname}
+  else
+    p no data to display!
+  
